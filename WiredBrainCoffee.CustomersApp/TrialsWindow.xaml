@@ -1,0 +1,29 @@
+﻿<Window x:Class="WiredBrainCoffee.CustomersApp.TrialsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WiredBrainCoffee.CustomersApp"
+        mc:Ignorable="d"
+        Title="TrialsWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="Red" Margin="10" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="1"></Rectangle>
+        
+    </Grid>
+    
+    <!--<StackPanel Orientation="Horizontal">
+        <StackPanel.Children>
+            <Rectangle Fill="DarkGray" Width="40" Margin="2" Height="40" ></Rectangle>
+            <Rectangle Fill="Red" Width="40" Height="40" Margin="2"></Rectangle>
+        </StackPanel.Children>
+    </StackPanel>-->
+</Window>

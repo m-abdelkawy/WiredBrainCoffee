@@ -5,8 +5,131 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WiredBrainCoffee.CustomersApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="450" Width="600">
+    <!--d:DesignWidth="800"
+        d:DesignHeight="450"-->
     <Grid>
-        <Button Content="Add Customer"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!--header-->
+        <StackPanel Background="#F05A28" 
+                    Orientation="Horizontal" 
+                    Grid.Row="0" 
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3">
+            <Image Source="/images/logo.png" Height="90" Margin="5"/>
+            <TextBlock Text="Coffee Customers"
+                       FontSize="30"
+                       FontWeight="ExtraBold"
+                       Foreground="White"
+                       VerticalAlignment="Bottom"
+                       Margin="20"/>
+            <TextBlock Text="Version 1.0.0"
+                       Foreground="#333333"
+                       VerticalAlignment="Bottom"
+                       Margin="0 0 0 25"/>
+        </StackPanel>
+
+        <!--Customer List-->
+            <!--<Rectangle Fill="DarkGray" 
+                       Grid.Row="1"
+                       Grid.Column="0"/>
+        >-->
+        
+        <!--Customer List-->
+        <Grid x:Name="gridCustomerList" Grid.Row="1" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Center"  
+                    Margin="10" 
+                    Width="30" 
+                    Height="30"
+                    Click="ButtonMove_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image x:Name="leftRightIconImg" Source="assets/icons/arrow_right.png" Height="20" Width="20"/>
+                    </StackPanel>
+                </Button>
+                <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Center"  
+                    Margin="10" 
+                    Width="65" 
+                    Height="30"
+                    Click="ButtonAddCustomer_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="assets/icons/add_friend.png" Height="20" Width="20"/>
+                        <TextBlock Text="Add" Margin="5 0 0 0"/>
+                    </StackPanel>
+                </Button>
+                <Button HorizontalAlignment="Left" 
+                    VerticalAlignment="Center"  
+                    Margin="10" 
+                    Width="65" 
+                    Height="30"
+                    Click="ButtonDeleteCustomer_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="assets/icons/delete4.png" Height="20" Width="20"/>
+                        <TextBlock Text="Delete" Margin="5 0 0 0"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <ListView Grid.Row="1" >
+                <ListViewItem>Thomas</ListViewItem>
+                <ListViewItem>Julia</ListViewItem>
+                <ListViewItem>Anna</ListViewItem>
+                <ListViewItem>Anna</ListViewItem>
+                <ListViewItem>Anna</ListViewItem>
+                <ListViewItem>Anna</ListViewItem>
+                <ListViewItem>Anna</ListViewItem>
+                <ListViewItem>Anna</ListViewItem>
+                <ListViewItem>Anna</ListViewItem>
+                <ListViewItem>Anna</ListViewItem>
+                <ListViewItem>Anna</ListViewItem>
+                <ListViewItem>Anna</ListViewItem>
+                <ListViewItem>Anna</ListViewItem>
+                <ListViewItem>Anna</ListViewItem>
+                <ListViewItem>Anna</ListViewItem>
+                <ListViewItem>Anna</ListViewItem>
+                <ListViewItem>Sarah</ListViewItem>
+            </ListView>
+
+        </Grid>
+        <!--Customer Detail-->
+        <StackPanel Orientation="Vertical" 
+                    Grid.Row="1" 
+                    Grid.Column="1">
+            <Label Content="First Name" Margin="10 10 0 0" />
+            <TextBox Name="fNameTxtBox" Margin="14 0 14 0"/>
+
+            <Label Content="Last Name" Margin="10 10 0 0"/>
+            <TextBox  Name="lNameTxtBox" Margin="14 0 14 0"/>
+
+            <CheckBox Content="Is Developer" Margin="10"/>
+        </StackPanel>
+
     </Grid>
+
+    <!--<Button HorizontalAlignment="Left" VerticalAlignment="Top"
+                Margin="10" Width="100" Click="ButtonAddCustomer_Click">
+        <StackPanel Orientation="Horizontal">
+            <Image Source="/Assets/Icons/add_friend.png" Width="20" Height="20" ></Image>
+            <TextBlock Margin="3 0 0 0">Add Customer</TextBlock>
+        </StackPanel>
+    </Button>-->
 </Window>

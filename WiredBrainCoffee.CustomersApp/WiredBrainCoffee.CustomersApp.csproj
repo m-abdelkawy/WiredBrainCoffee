@@ -6,4 +6,35 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Assets\Icons\add_friend.png" />
+    <None Remove="Assets\Icons\arrow_left.png" />
+    <None Remove="Assets\Icons\arrow_right.png" />
+    <None Remove="Assets\Icons\delete.png" />
+    <None Remove="Assets\Icons\delete1.png" />
+    <None Remove="Assets\Icons\delete2.png" />
+    <None Remove="Assets\Icons\delete3.png" />
+    <None Remove="Assets\Icons\delete4.png" />
+    <None Remove="Assets\Icons\forward1.png" />
+    <None Remove="Assets\Icons\forward2.png" />
+    <None Remove="Assets\Icons\forward3.png" />
+    <None Remove="Assets\Icons\forward4.png" />
+    <None Remove="Images\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Icons\add_friend.png" />
+    <Resource Include="Assets\Icons\arrow_left.png" />
+    <Resource Include="Assets\Icons\arrow_right.png" />
+    <Resource Include="Assets\Icons\delete.png" />
+    <Resource Include="Assets\Icons\delete1.png" />
+    <Resource Include="Assets\Icons\delete2.png" />
+    <Resource Include="Assets\Icons\delete3.png" />
+    <Resource Include="Assets\Icons\delete4.png" />
+    <Resource Include="Assets\Icons\forward1.png" />
+    <Resource Include="Assets\Icons\forward3.png" />
+    <Resource Include="Assets\Icons\forward4.png" />
+    <Resource Include="Images\logo.png" />
+  </ItemGroup>
+
 </Project>
