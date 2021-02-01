@@ -4,9 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WiredBrainCoffee.CustomersApp"
+        xmlns:controls="clr-namespace:WiredBrainCoffee.CustomersApp.Controls"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow" Height="450" Width="600">
+        Title="MainWindow" Height="450" Width="800">
     <!--d:DesignWidth="800"
         d:DesignHeight="450"-->
     <Grid>
@@ -47,9 +48,9 @@
         
         <!--Customer List-->
         <Grid x:Name="gridCustomerList" Grid.Row="1" Grid.Column="0">
-            <Grid.ColumnDefinitions>
+            <!--<Grid.ColumnDefinitions>
                 <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
+            </Grid.ColumnDefinitions>-->
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
@@ -89,39 +90,19 @@
                     </StackPanel>
                 </Button>
             </StackPanel>
-            <ListView Grid.Row="1" >
-                <ListViewItem>Thomas</ListViewItem>
+            <ListView Grid.Row="1" x:Name="customerListView"
+                      DisplayMemberPath="LastName"
+                      SelectionChanged="customerListView_SelectionChanged">
+                <!--<ListViewItem>Thomas</ListViewItem>
                 <ListViewItem>Julia</ListViewItem>
                 <ListViewItem>Anna</ListViewItem>
-                <ListViewItem>Anna</ListViewItem>
-                <ListViewItem>Anna</ListViewItem>
-                <ListViewItem>Anna</ListViewItem>
-                <ListViewItem>Anna</ListViewItem>
-                <ListViewItem>Anna</ListViewItem>
-                <ListViewItem>Anna</ListViewItem>
-                <ListViewItem>Anna</ListViewItem>
-                <ListViewItem>Anna</ListViewItem>
-                <ListViewItem>Anna</ListViewItem>
-                <ListViewItem>Anna</ListViewItem>
-                <ListViewItem>Anna</ListViewItem>
-                <ListViewItem>Anna</ListViewItem>
-                <ListViewItem>Anna</ListViewItem>
-                <ListViewItem>Sarah</ListViewItem>
+                <ListViewItem>Sarah</ListViewItem>-->
             </ListView>
 
         </Grid>
         <!--Customer Detail-->
-        <StackPanel Orientation="Vertical" 
-                    Grid.Row="1" 
-                    Grid.Column="1">
-            <Label Content="First Name" Margin="10 10 0 0" />
-            <TextBox Name="fNameTxtBox" Margin="14 0 14 0"/>
-
-            <Label Content="Last Name" Margin="10 10 0 0"/>
-            <TextBox  Name="lNameTxtBox" Margin="14 0 14 0"/>
-
-            <CheckBox Content="Is Developer" Margin="10"/>
-        </StackPanel>
+        <controls:CustomerDetailControl Grid.Row="1" Grid.Column="1"
+                                    x:Name="customerDetailControl"/>
 
     </Grid>
 

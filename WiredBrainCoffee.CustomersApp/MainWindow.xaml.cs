@@ -1,8 +1,12 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
+using WiredBrainCoffee.CustomersApp.DataProvider;
+using WiredBrainCoffee.CustomersApp.Model;
 
 namespace WiredBrainCoffee.CustomersApp
 {
@@ -11,15 +15,32 @@ namespace WiredBrainCoffee.CustomersApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private CustomerDataProvider _customerDataProvider;
+
         public MainWindow()
         {
-            InitializeComponent();
+            this.InitializeComponent();
+            this.Loaded += MainWindow_Loaded;
+            this.Closing += MainWindow_ClosingAsync; ;
+            _customerDataProvider = new CustomerDataProvider();
         }
 
-        private void ButtonAddCustomer_Click(object sender, RoutedEventArgs e)
+        private void MainWindow_ClosingAsync(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            var msgBox = MessageBox.Show("Customer Added~");
+            _customerDataProvider.SaveCustomersAsync(customerListView.Items.OfType<Customer>()).Wait();
+        }
 
+
+        
+
+        private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            customerListView.Items.Clear();
+            var lstCustomer = await _customerDataProvider.LoadCustomersAsync();
+            foreach (var customer in lstCustomer)
+            {
+                customerListView.Items.Add(customer);
+            }
         }
 
         private void ButtonMove_Click(object sender, RoutedEventArgs e)
@@ -38,10 +59,27 @@ namespace WiredBrainCoffee.CustomersApp
             leftRightIconImg.Source = new BitmapImage(new Uri(srcIconPath));
 
         }
+        private void ButtonAddCustomer_Click(object sender, RoutedEventArgs e)
+        {
+            var customer = new Customer { FirstName = "New" };
+            customerListView.Items.Add(customer);
+            customerListView.SelectedItem = customer;
+        }
 
         private void ButtonDeleteCustomer_Click(object sender, RoutedEventArgs e)
         {
-
+            var customer = customerListView.SelectedItem as Customer;
+            if(customer != null)
+            {
+                customerListView.Items.Remove(customer);
+            }
         }
+
+        private void customerListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var customer = customerListView.SelectedItem as Customer;
+            customerDetailControl.Customer = customer;
+        }
+
     }
 }

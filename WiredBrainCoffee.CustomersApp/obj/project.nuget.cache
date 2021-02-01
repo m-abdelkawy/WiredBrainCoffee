@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "35RETOplY0X0hoaW/ioF+hjPMMm8Vh0QHi7V5nMMHqQj7vN63Ueid7LlDBPP1+eZqVqbPo6tc3cQpPj3ubyIqQ==",
+  "dgSpecHash": "prEhaqXSRsapQajzcQbaz+3LP8Xeyg0zHZZyMrXuKkT2BaCW7qWYz9o+gaVU+s+UPjJXPtQtMlUQ6jnzVBvrcg==",
   "success": true,
   "projectFilePath": "E:\\My Code\\WiredBrainCoffee\\WiredBrainCoffee\\WiredBrainCoffee.CustomersApp\\WiredBrainCoffee.CustomersApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Moabd\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

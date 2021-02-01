@@ -23,6 +23,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Assets\Icons\add_friend.png" />
     <Resource Include="Assets\Icons\arrow_left.png" />
     <Resource Include="Assets\Icons\arrow_right.png" />

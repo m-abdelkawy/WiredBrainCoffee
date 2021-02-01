@@ -1,0 +1,37 @@
+[
+  {
+    "FirstName": "Thomas",
+    "LastName": "Huber",
+    "IsDeveloper": true
+  },
+  {
+    "FirstName": "Anna",
+    "LastName": "Rockstar",
+    "IsDeveloper": true
+  },
+  {
+    "FirstName": "Julia",
+    "LastName": "Master",
+    "IsDeveloper": false
+  },
+  {
+    "FirstName": "Urs",
+    "LastName": "Meier",
+    "IsDeveloper": true
+  },
+  {
+    "FirstName": "Sara",
+    "LastName": "Ramone",
+    "IsDeveloper": false
+  },
+  {
+    "FirstName": "Elsa",
+    "LastName": "Queen",
+    "IsDeveloper": false
+  },
+  {
+    "FirstName": "Alex",
+    "LastName": "Baier",
+    "IsDeveloper": true
+  }
+]
