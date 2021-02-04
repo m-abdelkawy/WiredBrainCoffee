@@ -1,10 +1,14 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 using WiredBrainCoffee.CustomersApp.Base;
 
 namespace WiredBrainCoffee.CustomersApp.Model
 {
+    [TypeConverter(typeof(CustomerConverter))]
+    [JsonConverter(typeof(NoTypeConverterJsonConverter<Customer>))]
     public class Customer : Observable
     {
         private string firstName;

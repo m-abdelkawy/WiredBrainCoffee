@@ -6,6 +6,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -17,6 +18,7 @@ namespace WiredBrainCoffee.CustomersApp.Controls
     /// <summary>
     /// Interaction logic for CustomerDetailControl.xaml
     /// </summary>
+    [ContentProperty(name:nameof(Customer))]
     public partial class CustomerDetailControl : UserControl
     {
         private Customer _customer;
@@ -34,9 +36,12 @@ namespace WiredBrainCoffee.CustomersApp.Controls
             {
                 _customer = value;
                 _isSettingCustomer = true;
+
+                //populate text box values with customer properties
                 txtFirstName.Text = _customer?.FirstName ?? "";
                 txtLastName.Text = _customer?.LastName ?? "";
                 chkIsDeveloper.IsChecked = _customer?.IsDeveloper;
+
                 _isSettingCustomer = false;
             }
         }

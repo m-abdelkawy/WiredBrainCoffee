@@ -1,6 +1,7 @@
 ﻿<Window x:Class="WiredBrainCoffee.CustomersApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:model="clr-namespace:WiredBrainCoffee.CustomersApp.Model"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WiredBrainCoffee.CustomersApp"
@@ -41,11 +42,11 @@
         </StackPanel>
 
         <!--Customer List-->
-            <!--<Rectangle Fill="DarkGray" 
+        <!--<Rectangle Fill="DarkGray" 
                        Grid.Row="1"
                        Grid.Column="0"/>
         >-->
-        
+
         <!--Customer List-->
         <Grid x:Name="gridCustomerList" Grid.Row="1" Grid.Column="0">
             <!--<Grid.ColumnDefinitions>
@@ -103,6 +104,24 @@
         <!--Customer Detail-->
         <controls:CustomerDetailControl Grid.Row="1" Grid.Column="1"
                                     x:Name="customerDetailControl"/>
+        
+        <!--Atrribute Syntax-->
+        <!--<controls:CustomerDetailControl Grid.Row="1" Grid.Column="1"
+                                    x:Name="customerDetailControl"
+                                        Customer="Mo,Jacob,True"/>-->
+
+        <!--<controls:CustomerDetailControl Grid.Row="1" Grid.Column="1"
+                                    x:Name="customerDetailControl">
+            Property Element Syntax
+            <controls:CustomerDetailControl.Customer>
+                <model:Customer FirstName="Mo" LastName="Jacob" IsDeveloper="True"/>
+            </controls:CustomerDetailControl.Customer>
+            
+            
+            Content Syntax (Add ContentProperty Attribute to the control class)
+            <model:Customer FirstName="Mo" LastName="Jacob" IsDeveloper="True"/>
+
+        </controls:CustomerDetailControl>-->
 
     </Grid>
 

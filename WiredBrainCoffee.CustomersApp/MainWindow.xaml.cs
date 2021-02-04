@@ -30,9 +30,6 @@ namespace WiredBrainCoffee.CustomersApp
             _customerDataProvider.SaveCustomersAsync(customerListView.Items.OfType<Customer>()).Wait();
         }
 
-
-        
-
         private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             customerListView.Items.Clear();
@@ -57,8 +54,8 @@ namespace WiredBrainCoffee.CustomersApp
                     , $@"Assets/Icons/arrow_{iconLeftRight}.png");
 
             leftRightIconImg.Source = new BitmapImage(new Uri(srcIconPath));
-
         }
+
         private void ButtonAddCustomer_Click(object sender, RoutedEventArgs e)
         {
             var customer = new Customer { FirstName = "New" };
@@ -80,6 +77,5 @@ namespace WiredBrainCoffee.CustomersApp
             var customer = customerListView.SelectedItem as Customer;
             customerDetailControl.Customer = customer;
         }
-
     }
 }
