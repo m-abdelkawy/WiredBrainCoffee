@@ -25,4 +25,7 @@ E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\obj\D
 E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\obj\Debug\netcoreapp3.1\Controls\CustomerDetailControl.g.cs
 E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
 E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\obj\Debug\netcoreapp3.1\Controls\CustomerDetailControl.baml
+E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\obj\Debug\netcoreapp3.1\App.baml
+E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\obj\Debug\netcoreapp3.1\Resources\Brushes.baml
+E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\obj\Debug\netcoreapp3.1\Resources\Strings.baml
 E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\obj\Debug\netcoreapp3.1\WiredBrainCoffee.CustomersApp.csprojAssemblyReference.cache

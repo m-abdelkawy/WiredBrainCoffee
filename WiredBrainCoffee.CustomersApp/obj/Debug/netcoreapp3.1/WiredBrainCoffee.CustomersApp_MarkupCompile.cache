@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\App.xaml
-41632054702
+6629269182
 
 111042596801
 1931530148616
-Controls\CustomerDetailControl.xaml;MainWindow.xaml;SplashScreen.xaml;TrialsWindow.xaml;
+Controls\CustomerDetailControl.xaml;MainWindow.xaml;Resources\Brushes.xaml;Resources\Strings.xaml;SplashScreen.xaml;TrialsWindow.xaml;
 
 False
 

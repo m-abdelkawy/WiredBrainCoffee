@@ -6,9 +6,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WiredBrainCoffee.CustomersApp"
         xmlns:controls="clr-namespace:WiredBrainCoffee.CustomersApp.Controls"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="450" Width="800">
+        <!--Background="{StaticResource ApplicationPageBackgroundThemeBrush}"-->
+
     <!--d:DesignWidth="800"
         d:DesignHeight="450"-->
     <Grid>
@@ -29,7 +32,7 @@
                     Grid.Column="0"
                     Grid.ColumnSpan="3">
             <Image Source="/images/logo.png" Height="90" Margin="5"/>
-            <TextBlock Text="Coffee Customers"
+            <TextBlock Text="{StaticResource applicationTitle}"
                        FontSize="30"
                        FontWeight="ExtraBold"
                        Foreground="White"
@@ -48,7 +51,10 @@
         >-->
 
         <!--Customer List-->
-        <Grid x:Name="gridCustomerList" Grid.Row="1" Grid.Column="0">
+        <Grid Grid.Row="1" 
+              Grid.Column="0"
+              x:Name="gridCustomerList"
+              Background="{StaticResource customerListBackgroundBrush}">
             <!--<Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>-->
@@ -104,6 +110,10 @@
         <!--Customer Detail-->
         <controls:CustomerDetailControl Grid.Row="1" Grid.Column="1"
                                     x:Name="customerDetailControl"/>
+        
+        <!--<controls:CustomerDetailControl Grid.Row="1" Grid.Column="1"
+                                    x:Name="customerDetailControl"
+                                        Customer="Ahmed,Adel,True"/>-->
         
         <!--Atrribute Syntax-->
         <!--<controls:CustomerDetailControl Grid.Row="1" Grid.Column="1"
