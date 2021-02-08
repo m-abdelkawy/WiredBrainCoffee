@@ -10,7 +10,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="450" Width="800">
-        <!--Background="{StaticResource ApplicationPageBackgroundThemeBrush}"-->
+    <!--Background="{StaticResource ApplicationPageBackgroundThemeBrush}"-->
 
     <!--d:DesignWidth="800"
         d:DesignHeight="450"-->
@@ -98,48 +98,13 @@
                 </Button>
             </StackPanel>
             <ListView Grid.Row="1" x:Name="customerListView"
-                      DisplayMemberPath="LastName"
-                      SelectionChanged="customerListView_SelectionChanged">
-                <!--<ListViewItem>Thomas</ListViewItem>
-                <ListViewItem>Julia</ListViewItem>
-                <ListViewItem>Anna</ListViewItem>
-                <ListViewItem>Sarah</ListViewItem>-->
+                      DisplayMemberPath="LastName">
             </ListView>
 
         </Grid>
         <!--Customer Detail-->
         <controls:CustomerDetailControl Grid.Row="1" Grid.Column="1"
-                                    x:Name="customerDetailControl"/>
-        
-        <!--<controls:CustomerDetailControl Grid.Row="1" Grid.Column="1"
-                                    x:Name="customerDetailControl"
-                                        Customer="Ahmed,Adel,True"/>-->
-        
-        <!--Atrribute Syntax-->
-        <!--<controls:CustomerDetailControl Grid.Row="1" Grid.Column="1"
-                                    x:Name="customerDetailControl"
-                                        Customer="Mo,Jacob,True"/>-->
-
-        <!--<controls:CustomerDetailControl Grid.Row="1" Grid.Column="1"
-                                    x:Name="customerDetailControl">
-            Property Element Syntax
-            <controls:CustomerDetailControl.Customer>
-                <model:Customer FirstName="Mo" LastName="Jacob" IsDeveloper="True"/>
-            </controls:CustomerDetailControl.Customer>
-            
-            
-            Content Syntax (Add ContentProperty Attribute to the control class)
-            <model:Customer FirstName="Mo" LastName="Jacob" IsDeveloper="True"/>
-
-        </controls:CustomerDetailControl>-->
+                                        Customer="{Binding ElementName=customerListView ,Path=SelectedItem, Mode=OneWay}"/>
 
     </Grid>
-
-    <!--<Button HorizontalAlignment="Left" VerticalAlignment="Top"
-                Margin="10" Width="100" Click="ButtonAddCustomer_Click">
-        <StackPanel Orientation="Horizontal">
-            <Image Source="/Assets/Icons/add_friend.png" Width="20" Height="20" ></Image>
-            <TextBlock Margin="3 0 0 0">Add Customer</TextBlock>
-        </StackPanel>
-    </Button>-->
 </Window>

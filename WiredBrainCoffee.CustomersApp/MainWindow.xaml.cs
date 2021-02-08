@@ -72,10 +72,5 @@ namespace WiredBrainCoffee.CustomersApp
             }
         }
 
-        private void customerListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var customer = customerListView.SelectedItem as Customer;
-            customerDetailControl.Customer = customer;
-        }
     }
 }

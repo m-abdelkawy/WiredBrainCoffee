@@ -18,10 +18,13 @@ namespace WiredBrainCoffee.CustomersApp.Controls
     /// <summary>
     /// Interaction logic for CustomerDetailControl.xaml
     /// </summary>
-    [ContentProperty(name:nameof(Customer))]
+    [ContentProperty(name: nameof(Customer))]
     public partial class CustomerDetailControl : UserControl
     {
-        private Customer _customer;
+        // Using a DependencyProperty as the backing store for Customer.  
+        //This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CustomerProperty =
+            DependencyProperty.Register("Customer", typeof(Customer), typeof(CustomerDetailControl), new PropertyMetadata(null, CustomerPropertyChangedCallBack));
         private bool _isSettingCustomer = false;
 
         public CustomerDetailControl()
@@ -29,20 +32,25 @@ namespace WiredBrainCoffee.CustomersApp.Controls
             InitializeComponent();
         }
 
+
+
         public Customer Customer
         {
-            get { return _customer; }
-            set
+            get { return (Customer)GetValue(CustomerProperty); }
+            set { SetValue(CustomerProperty, value); }
+        }
+
+
+        private static void CustomerPropertyChangedCallBack(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (d is CustomerDetailControl customerDetailControl)
             {
-                _customer = value;
-                _isSettingCustomer = true;
-
-                //populate text box values with customer properties
-                txtFirstName.Text = _customer?.FirstName ?? "";
-                txtLastName.Text = _customer?.LastName ?? "";
-                chkIsDeveloper.IsChecked = _customer?.IsDeveloper;
-
-                _isSettingCustomer = false;
+                customerDetailControl._isSettingCustomer = true;
+                var customer = e.NewValue as Customer;
+                customerDetailControl.txtFirstName.Text = customer?.FirstName ?? "";
+                customerDetailControl.txtLastName.Text = customer?.LastName ?? "";
+                customerDetailControl.chkIsDeveloper.IsChecked = customer?.IsDeveloper;
+                customerDetailControl._isSettingCustomer = false;
             }
         }
 
@@ -62,7 +70,6 @@ namespace WiredBrainCoffee.CustomersApp.Controls
             {
                 return;
             }
-
             if (Customer != null)
             {
                 Customer.FirstName = txtFirstName.Text;
