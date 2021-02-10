@@ -21,6 +21,14 @@ namespace WiredBrainCoffee.CustomersApp.ViewModel
             Customers = new ObservableCollection<Customer>();
 
             DeleteCustomerCommand = new DelegateCommand(OnDeleteCustomerExecute, OnDeleteCustomerCanExecute);
+            AddCustomerCommand = new DelegateCommand(OnAddCustomerExecute);
+        }
+
+        private void OnAddCustomerExecute(object obj)
+        {
+            var customer = new Customer() { FirstName="New"};
+            Customers.Add(customer);
+            SelectedCustomer = customer;
         }
 
         private bool OnDeleteCustomerCanExecute(object arg)
@@ -38,6 +46,7 @@ namespace WiredBrainCoffee.CustomersApp.ViewModel
         }
 
         public ICommand DeleteCustomerCommand { get; private set; }
+        public ICommand AddCustomerCommand { get; private set; }
 
         public bool IsCustomerSelected => SelectedCustomer != null;
         public ObservableCollection<Customer> Customers { get; private set; }
@@ -54,6 +63,8 @@ namespace WiredBrainCoffee.CustomersApp.ViewModel
                     //worked fine without it actually!
                     OnPropertyChanged();
                     OnPropertyChanged(nameof(IsCustomerSelected));
+
+                    ((DelegateCommand)DeleteCustomerCommand).RaiseCanExecuteChanged();
                 }
             }
         }

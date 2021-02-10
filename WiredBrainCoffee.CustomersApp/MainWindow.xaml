@@ -83,7 +83,7 @@
                     Margin="10" 
                     Width="65" 
                     Height="30"
-                    Click="ButtonAddCustomer_Click">
+                    Command="{Binding AddCustomerCommand}">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="assets/icons/add_friend.png" Height="20" Width="20"/>
                         <TextBlock Text="Add" Margin="5 0 0 0"/>
@@ -94,8 +94,7 @@
                     Margin="10" 
                     Width="65" 
                     Height="30"
-                    Click="ButtonDeleteCustomer_Click"
-                        IsEnabled="{Binding Path=IsCustomerSelected, Mode=OneWay}">
+                    Command="{Binding DeleteCustomerCommand}">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="assets/icons/delete4.png" Height="20" Width="20"/>
                         <TextBlock Text="Delete" Margin="5 0 0 0"/>
