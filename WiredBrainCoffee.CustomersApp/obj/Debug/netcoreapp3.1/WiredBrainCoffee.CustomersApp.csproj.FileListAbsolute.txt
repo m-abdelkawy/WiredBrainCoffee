@@ -5,7 +5,6 @@ E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\bin\D
 E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\bin\Debug\netcoreapp3.1\WiredBrainCoffee.CustomersApp.dll
 E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\bin\Debug\netcoreapp3.1\WiredBrainCoffee.CustomersApp.pdb
 E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\obj\Debug\netcoreapp3.1\WiredBrainCoffee.CustomersApp.csprojAssemblyReference.cache
 E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\obj\Debug\netcoreapp3.1\Controls\CustomerDetailControl.g.cs
 E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\obj\Debug\netcoreapp3.1\SplashScreen.g.cs
@@ -29,3 +28,4 @@ E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\obj\D
 E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\obj\Debug\netcoreapp3.1\WiredBrainCoffee.CustomersApp.dll
 E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\obj\Debug\netcoreapp3.1\WiredBrainCoffee.CustomersApp.pdb
 E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\obj\Debug\netcoreapp3.1\WiredBrainCoffee.CustomersApp.genruntimeconfig.cache
+E:\My Code\WiredBrainCoffee\WiredBrainCoffee\WiredBrainCoffee.CustomersApp\obj\Debug\netcoreapp3.1\WiredBrainCoffee.CustomersApp.csprojAssemblyReference.cache

@@ -8,7 +8,7 @@ using WiredBrainCoffee.CustomersApp.Model;
 
 namespace WiredBrainCoffee.CustomersApp.DataProvider
 {
-    public class CustomerDataProvider
+    public class CustomerDataProvider : ICustomerDataProvider
     {
         private static readonly string _customersFileName = "customers.json";
 

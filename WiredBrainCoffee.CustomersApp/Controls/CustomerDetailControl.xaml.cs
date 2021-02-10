@@ -24,7 +24,7 @@ namespace WiredBrainCoffee.CustomersApp.Controls
         // Using a DependencyProperty as the backing store for Customer.  
         //This enables animation, styling, binding, etc...
         public static readonly DependencyProperty CustomerProperty =
-            DependencyProperty.Register("Customer", typeof(Customer), typeof(CustomerDetailControl), new PropertyMetadata(null, CustomerPropertyChangedCallBack));
+            DependencyProperty.Register("Customer", typeof(Customer), typeof(CustomerDetailControl), new PropertyMetadata(null, null));
         private bool _isSettingCustomer = false;
 
         public CustomerDetailControl()
@@ -38,44 +38,6 @@ namespace WiredBrainCoffee.CustomersApp.Controls
         {
             get { return (Customer)GetValue(CustomerProperty); }
             set { SetValue(CustomerProperty, value); }
-        }
-
-
-        private static void CustomerPropertyChangedCallBack(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            if (d is CustomerDetailControl customerDetailControl)
-            {
-                customerDetailControl._isSettingCustomer = true;
-                var customer = e.NewValue as Customer;
-                customerDetailControl.txtFirstName.Text = customer?.FirstName ?? "";
-                customerDetailControl.txtLastName.Text = customer?.LastName ?? "";
-                customerDetailControl.chkIsDeveloper.IsChecked = customer?.IsDeveloper;
-                customerDetailControl._isSettingCustomer = false;
-            }
-        }
-
-        private void CheckBox_IsCheckedChanged(object sender, RoutedEventArgs e)
-        {
-            UpdateCustomer();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            UpdateCustomer();
-        }
-
-        private void UpdateCustomer()
-        {
-            if (_isSettingCustomer)
-            {
-                return;
-            }
-            if (Customer != null)
-            {
-                Customer.FirstName = txtFirstName.Text;
-                Customer.LastName = txtLastName.Text;
-                Customer.IsDeveloper = chkIsDeveloper.IsChecked.GetValueOrDefault();
-            }
         }
     }
 }
